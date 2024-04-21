@@ -132,7 +132,8 @@ h1 strong {
   padding-bottom: 20px;
 }
 
-.portafolio h2 {
+.portafolio h2,
+.contact h2 {
   font-size: 32px;
 }
 
@@ -145,6 +146,31 @@ h1 strong {
 .portafolioImg {
   max-width: 100%;
   border-radius: 8px;
+}
+
+.contact {
+    background-color: #70b6ec;
+    color: white;  
+}
+
+.contact div {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 40px;
+    
+  }
+
+.social {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.social img {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -197,5 +223,13 @@ h1 strong {
   .portafolioImages {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .social {
+    gap: 62px;
+  }
+
+  .social img {
+    width: 50px;
   }
 }
