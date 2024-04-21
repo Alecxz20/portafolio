@@ -1,0 +1,201 @@
+/* main color #79D5FE */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* Estilos generales */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Estilos Navbar */
+header {
+  background-color: #70b6ec;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  justify-content: space-between;
+}
+
+input {
+  display: none;
+}
+
+.ul {
+  background-color: #70b6ec;
+  list-style: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  padding-left: 10%;
+  width: 100%;
+  z-index: 10;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  transition: all 600ms;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ulDesktop {
+  display: none;
+}
+
+.hamburger:checked + .ul {
+  height: calc(100vh - 60px);
+  padding-top: 24px;
+}
+
+/* Estilos main */
+
+main {
+  width: 100vw;
+}
+
+section.hero {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  position: relative;
+  background-image: url('./imgs/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.background {
+  background-position: center;
+}
+
+h1 {
+  font-size: 2rem;
+  padding-left: 10%;
+  color: white;
+  line-height: 28px;
+  font-weight: 400;
+  padding-bottom: 60px;
+}
+
+h1 strong {
+  font-weight: bold;
+  color: #b9eaef;
+}
+
+.profile {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.aboutMe {
+  color: #b9eaef;
+  background-color: #299fe4;
+}
+
+.aboutMe div {
+  padding: 40px 10%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.aboutMe h2 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.portafolio {
+  background-color: #70b6ec;
+  color: white;
+}
+
+.portafolio div {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.portafolio h2 {
+  font-size: 32px;
+}
+
+.portafolioImages {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.portafolioImg {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  section.hero {
+    display: flex;
+    align-items: center;
+  }
+  .profile {
+    width: 50%;
+    padding-left: 10%;
+    bottom: 70px;
+  }
+  h1 {
+    font-size: 63px;
+    line-height: 56px;
+    padding-left: 5%;
+  }
+  .hamIcon {
+    display: none;
+  }
+
+  header {
+    justify-content: flex-start;
+  }
+  .ulDesktop {
+    display: flex;
+    color: white;
+    gap: 36px;
+    list-style-type: none;
+    position: relative;
+    z-index: 16;
+  }
+  ul.ulDesktop > li {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutMe {
+    font-size: 28px;
+  }
+  .ulDesktop {
+    display: flex;
+    font-size: 22px;
+  }
+
+  .aboutMe h2 {
+    font-size: 28px;
+  }
+  .portafolioImages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
